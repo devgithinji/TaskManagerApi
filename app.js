@@ -7,7 +7,7 @@ const notFound = require('./middleware/not-found')
 const errorHandler = require('./middleware/error-handler')
 app.use(express.json());
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 app.get('/hello', (req, res) => {
